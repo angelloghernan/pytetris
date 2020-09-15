@@ -70,7 +70,7 @@ def init(data):
     3 : 300,
     4 : 1200
     }
-    pygame.mixer.Channel(0).play(pygame.mixer.Sound("tetris.wav"),-1)
+    #pygame.mixer.Channel(0).play(pygame.mixer.Sound("tetris.wav"),-1)
     #Get columns, rows, cellsize, margin
     data.cols = gameDimensions()[1]
     data.rows = gameDimensions()[0]
@@ -148,7 +148,7 @@ def keyPressed(event, data):
                 getNewFallingPiece(data)
         elif(event.keysym == "p"):
             data.paused = True
-            pygame.mixer.Channel(0).pause()
+            #pygame.mixer.Channel(0).pause()
         elif(event.keysym == "r" and data.gameOver):
             init(data)
         elif(event.keysym == "h" and data.gameOver):
@@ -158,7 +158,7 @@ def keyPressed(event, data):
                 data.highScoresList = True
     elif(event.keysym == "p"):
         data.paused = False
-        pygame.mixer.Channel(0).unpause()
+        #pygame.mixer.Channel(0).unpause()
     
 def hardDropPiece(data):
     dScore = 0
